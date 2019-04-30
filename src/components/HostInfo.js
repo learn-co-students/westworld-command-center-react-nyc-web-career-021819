@@ -5,7 +5,7 @@ import { Radio, Icon, Card, Grid, Image, Dropdown, Divider } from 'semantic-ui-r
 
 class HostInfo extends Component {
   state = {
-    options: [{key: "some_area" text: "Some Area" value: "some_area"}, {key: "another_area" text: "Another Area" value: "another_area"}],
+    options: [{ key: "some_area" text: "Some Area" value: "some_area" }, { key: "another_area" text: "Another Area" value: "another_area" }],
     value: "some_area",
     // This state is just to show how the dropdown component works.
     // Options have to be formatted in this way (array of objects with keys of: key, text, value)
@@ -16,7 +16,7 @@ class HostInfo extends Component {
 
 
 
-  handleChange = (e, {value}) => {
+  handleChange = (e, { value }) => {
     // the 'value' attribute is given via Semantic's Dropdown component.
     // Put a debugger in here and see what the "value" variable is when you pass in different options.
     // See the Semantic docs for more info: https://react.semantic-ui.com/modules/dropdown/#usage-controlled
@@ -26,12 +26,12 @@ class HostInfo extends Component {
     console.log("The radio button fired");
   }
 
-  render(){
+  render() {
     return (
       <Grid>
         <Grid.Column width={6}>
           <Image
-            src={ /* pass in the right image here */ }
+            src={ /* pass in the right image here */}
             floated='left'
             size='small'
             className="hostImg"
@@ -41,8 +41,8 @@ class HostInfo extends Component {
           <Card>
             <Card.Content>
               <Card.Header>
-                {"Bob"} | { true ? <Icon name='man' /> : <Icon name='woman' />}
-                { /* Think about how the above should work to conditionally render the right First Name and the right gender Icon */ }
+                {"Bob"} | {true ? <Icon name='man' /> : <Icon name='woman' />}
+                { /* Think about how the above should work to conditionally render the right First Name and the right gender Icon */}
               </Card.Header>
               <Card.Meta>
                 <Radio
